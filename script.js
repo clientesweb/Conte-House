@@ -29,36 +29,24 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Hero slider
     const heroSlider = document.getElementById('hero-slider');
-    const heroImages = [
-        'hero-image-1.jpg',
-        'hero-image-2.jpg',
-        'hero-image-3.jpg'
-    ];
-
-    heroImages.forEach((image, index) => {
-        const img = document.createElement('img');
-        img.src = image;
-        img.alt = `Hero Image ${index + 1}`;
-        img.className = 'absolute inset-0 w-full h-full object-cover transition-opacity duration-1000';
-        img.style.opacity = index === 0 ? '1' : '0';
-        heroSlider.appendChild(img);
-    });
-
+    const heroImages = heroSlider.querySelectorAll('img');
     let currentHeroImage = 0;
-    setInterval(() => {
-        const images = heroSlider.querySelectorAll('img');
-        images[currentHeroImage].style.opacity = '0';
-        currentHeroImage = (currentHeroImage + 1) % images.length;
-        images[currentHeroImage].style.opacity = '1';
-    }, 5000);
+
+    function changeHeroImage() {
+        heroImages[currentHeroImage].style.opacity = '0';
+        currentHeroImage = (currentHeroImage + 1) % heroImages.length;
+        heroImages[currentHeroImage].style.opacity = '1';
+    }
+
+    setInterval(changeHeroImage, 5000);
 
     // Projects slider
     const projectsSlider = document.getElementById('proyectos-slider');
     const projects = [
-        { title: 'Proyecto 1', image: 'project1.jpg', description: 'Descripción del Proyecto 1' },
-        { title: 'Proyecto 2', image: 'project2.jpg', description: 'Descripción del Proyecto 2' },
-        { title: 'Proyecto 3', image: 'project3.jpg', description: 'Descripción del Proyecto 3' },
-        { title: 'Proyecto 4', image: 'project4.jpg', description: 'Descripción del Proyecto 4' },
+        { title: 'Proyecto 1', image: 'https://images.unsplash.com/photo-1513694203232-719a280e022f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1769&q=80', description: 'Descripción del Proyecto 1' },
+        { title: 'Proyecto 2', image: 'https://images.unsplash.com/photo-1519558260268-cde7e03a0152?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80', description: 'Descripción del Proyecto 2' },
+        { title: 'Proyecto 3', image: 'https://images.unsplash.com/photo-1515263487990-61b07816b324?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80', description: 'Descripción del Proyecto 3' },
+        { title: 'Proyecto 4', image: 'https://images.unsplash.com/photo-1518780664697-55e3ad937233?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1765&q=80', description: 'Descripción del Proyecto 4' },
     ];
 
     projects.forEach(project => {
@@ -90,9 +78,9 @@ document.addEventListener('DOMContentLoaded', function() {
     // Testimonials slider
     const testimoniosSlider = document.getElementById('testimonios-slider').querySelector('.flex');
     const testimonials = [
-        { name: 'Juan Pérez', text: 'Excelente servicio y calidad en la construcción de mi casa contenedor.', image: 'testimonial1.jpg' },
-        { name: 'María González', text: 'Conte House superó mis expectativas. Recomiendo sus servicios al 100%.', image: 'testimonial2.jpg' },
-        { name: 'Carlos Rodríguez', text: 'Profesionales en todo sentido. Mi oficina quedó perfecta.', image: 'testimonial3.jpg' },
+        { name: 'Juan Pérez', text: 'Excelente servicio y calidad en la construcción de mi casa contenedor.', image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1287&q=80' },
+        { name: 'María González', text: 'Conte House superó mis expectativas. Recomiendo sus servicios al 100%.', image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1287&q=80' },
+        { name: 'Carlos Rodríguez', text: 'Profesionales en todo sentido. Mi oficina quedó perfecta.', image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1287&q=80' },
     ];
 
     testimonials.forEach(testimonial => {
@@ -131,93 +119,120 @@ document.addEventListener('DOMContentLoaded', function() {
         this.reset();
     });
 
-    // Gallery modal
-    const galleryModal = document.getElementById('gallery-modal');
-    const closeGalleryModal = document.getElementById('close-gallery-modal');
-    const galleryModalSlider = document.getElementById('gallery-modal-slider');
-    const galleryModalDescription = document.getElementById('gallery-modal-description');
-    const galleryModalPrev = document.getElementById('gallery-modal-prev');
-    const galleryModalNext = document.getElementById('gallery-modal-next');
+    // Tipologías filter
+    const tipologiaFilter = document.getElementById('tipologia-filter');
+    const tipologiaCards = document.querySelectorAll('.tipologia-card');
 
-    let currentGalleryImage = 0;
-    const galleryImages = [
-        { src: 'gallery1.jpg', description: 'Interior de contenedor habitable' },
-        { src: 'gallery2.jpg', description: 'Exterior de casa contenedor' },
-        { src: 'gallery3.jpg', description: 'Área de estar en contenedor' },
-    ];
+    tipologiaFilter.addEventListener('change', function() {
+        const selectedType = this.value;
+        tipologiaCards.forEach(card => {
+            if (selectedType === 'all' || card.dataset.type === selectedType) {
+                card.style.display = 'block';
+            } else {
+                card.style.display = 'none';
+            }
+        });
+    });
 
-    function openGalleryModal(index) {
-        currentGalleryImage = index;
-        updateGalleryModal();
-        galleryModal.classList.remove('hidden');
+    // Tipologías modal
+    const tipologiaModal = document.getElementById('tipologia-modal');
+    const closeTipologiaModal = document.getElementById('close-tipologia-modal');
+    const tipologiaModalContent = document.getElementById('tipologia-modal-content');
+    const viewMoreButtons = document.querySelectorAll('.view-more');
+
+    const tipologias = {
+        'house-premium': {
+            title: 'House Premium 60m²',
+            description: 'Espacioso y lujoso, perfecto para familias que buscan comodidad y estilo.',
+            features: ['2 dormitorios', 'Cocina integrada', 'Sala de estar amplia', 'Baño completo'],
+            images: [
+                'https://images.unsplash.com/photo-1513694203232-719a280e022f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1769&q=80',
+                'https://images.unsplash.com/photo-1519558260268-cde7e03a0152?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80'
+            ]
+        },
+        'house-luxury': {
+            title: 'House Luxury 100m²',
+            description: 'La máxima expresión del lujo y el espacio en construcción modular.',
+            features: ['3 dormitorios', 'Cocina gourmet', 'Sala de estar y comedor', 'Terraza privada'],
+            images: [
+                'https://images.unsplash.com/photo-1519558260268-cde7e03a0152?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80',
+                'https://images.unsplash.com/photo-1515263487990-61b07816b324?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80'
+            ]
+        },
+        'house-large': {
+            title: 'House Large 45m²',
+            description: 'Amplio y confortable, ideal para parejas o pequeñas familias.',
+            features: ['1 dormitorio', 'Cocina integrada', 'Sala de estar', 'Baño completo'],
+            images: [
+                'https://images.unsplash.com/photo-1515263487990-61b07816b324?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80',
+                'https://images.unsplash.com/photo-1518780664697-55e3ad937233?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1765&q=80'
+            ]
+        },
+        'house-classic': {
+            title: 'House Classic 30m²',
+            description: 'Compacto y funcional, perfecto para solteros o parejas.',
+            features: ['1 dormitorio', 'Cocina americana', 'Área de estar', 'Baño completo'],
+            images: [
+                'https://images.unsplash.com/photo-1518780664697-55e3ad937233?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1765&q=80',
+                'https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1680&q=80'
+            ]
+        },
+        'studio-15': {
+            title: 'Studio 15m²',
+            description: 'Eficiente y moderno, ideal para espacios de trabajo o estudios.',
+            features: ['Área multifuncional', 'Kitchenette', 'Baño compacto'],
+            images: [
+                'https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1680&q=80',
+                'https://images.unsplash.com/photo-1486304873000-235643847519?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1332&q=80'
+            ]
+        },
+        'studio-30': {
+            title: 'Studio 30m²',
+            description: 'Amplio y versátil, perfecto para oficinas o espacios creativos.',
+            features: ['Área de trabajo', 'Sala de reuniones', 'Kitchenette', 'Baño completo'],
+            images: [
+                'https://images.unsplash.com/photo-1486304873000-235643847519?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1332&q=80',
+                'https://images.unsplash.com/photo-1513694203232-719a280e022f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1769&q=80'
+            ]
+        }
+    };
+
+    function openTipologiaModal(tipologia) {
+        const data = tipologias[tipologia];
+        tipologiaModalContent.innerHTML = `
+            <h2 class="text-2xl font-bold mb-4">${data.title}</h2>
+            <div class="mb-4">
+                <img src="${data.images[0]}" alt="${data.title}" class="w-full h-64 object-cover rounded-lg">
+            </div>
+            <p class="mb-4">${data.description}</p>
+            <h3 class="text-xl font-semibold mb-2">Características:</h3>
+            <ul class="list-disc list-inside mb-4">
+                ${data.features.map(feature => `<li>${feature}</li>`).join('')}
+            </ul>
+            <div class="grid grid-cols-2 gap-4">
+                ${data.images.map(image => `
+                    <img src="${image}" alt="${data.title}" class="w-full h-32 object-cover rounded-lg">
+                `).join('')}
+            </div>
+        `;
+        tipologiaModal.classList.remove('hidden');
     }
 
-    function updateGalleryModal() {
-        galleryModalSlider.innerHTML = `<img src="${galleryImages[currentGalleryImage].src}" alt="Gallery image" class="w-full h-64 object-cover">`;
-        galleryModalDescription.textContent = galleryImages[currentGalleryImage].description;
-    }
-
-    closeGalleryModal.addEventListener('click', () => {
-        galleryModal.classList.add('hidden');
+    viewMoreButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const tipologia = button.dataset.tipologia;
+            openTipologiaModal(tipologia);
+        });
     });
 
-    galleryModalPrev.addEventListener('click', () => {
-        currentGalleryImage = (currentGalleryImage - 1 + galleryImages.length) % galleryImages.length;
-        updateGalleryModal();
+    closeTipologiaModal.addEventListener('click', () => {
+        tipologiaModal.classList.add('hidden');
     });
 
-    galleryModalNext.addEventListener('click', () => {
-        currentGalleryImage = (currentGalleryImage + 1) % galleryImages.length;
-        updateGalleryModal();
-    });
-
-    // Add click event listeners to gallery images
-    document.querySelectorAll('.gallery-image').forEach((img, index) => {
-        img.addEventListener('click', () => openGalleryModal(index));
-    });
-
-    // Project modal
-    const projectModal = document.getElementById('project-modal');
-    const closeProjectModal = document.getElementById('close-project-modal');
-    const projectModalSlider = document.getElementById('project-modal-slider');
-    const projectModalDescription = document.getElementById('project-modal-description');
-    const projectModalPrev = document.getElementById('project-modal-prev');
-    const projectModalNext = document.getElementById('project-modal-next');
-
-    let currentProjectImage = 0;
-    const projectImages = [
-        { src: 'project1.jpg', description: 'Proyecto 1: Casa contenedor de lujo' },
-        { src: 'project2.jpg', description: 'Proyecto 2: Oficina modular' },
-        { src: 'project3.jpg', description: 'Proyecto 3: Complejo residencial' },
-    ];
-
-    function openProjectModal(index) {
-        currentProjectImage = index;
-        updateProjectModal();
-        projectModal.classList.remove('hidden');
-    }
-
-    function updateProjectModal() {
-        projectModalSlider.innerHTML = `<img src="${projectImages[currentProjectImage].src}" alt="Project image" class="w-full h-64 object-cover">`;
-        projectModalDescription.textContent = projectImages[currentProjectImage].description;
-    }
-
-    closeProjectModal.addEventListener('click', () => {
-        projectModal.classList.add('hidden');
-    });
-
-    projectModalPrev.addEventListener('click', () => {
-        currentProjectImage = (currentProjectImage - 1 + projectImages.length) % projectImages.length;
-        updateProjectModal();
-    });
-
-    projectModalNext.addEventListener('click', () => {
-        currentProjectImage = (currentProjectImage + 1) % projectImages.length;
-        updateProjectModal();
-    });
-
-    // Add click event listeners to project cards
-    document.querySelectorAll('#proyectos-slider .bg-white').forEach((card, index) => {
-        card.querySelector('button').addEventListener('click', () => openProjectModal(index));
+    // Close modal when clicking outside
+    tipologiaModal.addEventListener('click', (e) => {
+        if (e.target === tipologiaModal) {
+            tipologiaModal.classList.add('hidden');
+        }
     });
 });
