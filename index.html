@@ -97,7 +97,9 @@
     <!-- Hero Section -->
     <section id="inicio" class="relative h-[600px] section-background">
         <div id="hero-slider" class="absolute inset-0">
-            <!-- Images will be inserted here by JavaScript -->
+            <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1769&q=80" alt="Hero Image 1" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000">
+            <img src="https://images.unsplash.com/photo-1519558260268-cde7e03a0152?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="Hero Image 2" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0">
+            <img src="https://images.unsplash.com/photo-1515263487990-61b07816b324?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="Hero Image 3" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0">
         </div>
         <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center text-white">
             <div class="text-center">
@@ -120,13 +122,20 @@
     <section id="nosotros" class="py-16 section-background">
         <div class="container mx-auto px-4">
             <h2 class="text-3xl font-bold mb-8 text-center text-secondary">Quienes Somos</h2>
-            <div class="max-w-3xl mx-auto text-center p-8 border border-gray-200 rounded-lg shadow-sm bg-white">
-                <p class="mb-4 text-secondary">
-                    Somos una empresa dedicada a la construcción y el manejo de proyectos de espacios modernos adaptados a la necesidad de las nuevas generaciones que priorizan el cuidado del medio ambiente mediante el recibido de materiales en desuso evitando así la contaminación del planeta y otorgándoles una nueva funcionalidad.
-                </p>
-                <p class="text-secondary">
-                    Brindamos la mejor alternativa para la construcción de espacios modulares habitables de diseño funcional con contenedores marítimos destinados a viviendas partículas, oficinas y locales comerciales.
-                </p>
+            <div class="flex flex-col md:flex-row items-center justify-between">
+                <div class="md:w-1/2 mb-8 md:mb-0">
+                    <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1769&q=80" alt="Nosotros" class="rounded-lg shadow-md w-full h-auto">
+                </div>
+                <div class="md:w-1/2 md:pl-8">
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <p class="mb-4 text-secondary">
+                            Somos una empresa dedicada a la construcción y el manejo de proyectos de espacios modernos adaptados a la necesidad de las nuevas generaciones que priorizan el cuidado del medio ambiente mediante el recibido de materiales en desuso evitando así la contaminación del planeta y otorgándoles una nueva funcionalidad.
+                        </p>
+                        <p class="text-secondary">
+                            Brindamos la mejor alternativa para la construcción de espacios modulares habitables de diseño funcional con contenedores marítimos destinados a viviendas partículas, oficinas y locales comerciales.
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -137,21 +146,25 @@
             <h2 class="text-3xl font-bold mb-12 text-center text-secondary">Nuestros Servicios</h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
                 <div class="bg-white p-6 rounded-lg shadow-md text-center hover-grow animate-fade-in-up" style="animation-delay: 0.1s;">
+                    <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1331&q=80" alt="Diseño Sostenible" class="w-full h-48 object-cover mb-4 rounded">
                     <i class="fas fa-pencil-ruler text-4xl text-primary mb-4"></i>
                     <h3 class="text-xl font-semibold mb-2">Diseño Sostenible</h3>
                     <p class="text-secondary">Creamos diseños personalizados que se adaptan a tus necesidades y al medio ambiente.</p>
                 </div>
                 <div class="bg-white p-6 rounded-lg shadow-md text-center hover-grow animate-fade-in-up" style="animation-delay: 0.2s;">
+                    <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1313&q=80" alt="Reutilización" class="w-full h-48 object-cover mb-4 rounded">
                     <i class="fas fa-recycle text-4xl text-primary mb-4"></i>
                     <h3 class="text-xl font-semibold mb-2">Reutilización</h3>
                     <p class="text-secondary">Transformamos contenedores marítimos en espacios habitables y funcionales.</p>
                 </div>
                 <div class="bg-white p-6 rounded-lg shadow-md text-center hover-grow animate-fade-in-up" style="animation-delay: 0.3s;">
+                    <img  src="https://images.unsplash.com/photo-1513694203232-719a280e022f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1769&q=80" alt="Construcción Modular" class="w-full h-48 object-cover mb-4 rounded">
                     <i class="fas fa-home text-4xl text-primary mb-4"></i>
                     <h3 class="text-xl font-semibold mb-2">Construcción Modular</h3>
                     <p class="text-secondary">Ofrecemos soluciones rápidas y eficientes para viviendas y espacios comerciales.</p>
                 </div>
                 <div class="bg-white p-6 rounded-lg shadow-md text-center hover-grow animate-fade-in-up" style="animation-delay: 0.4s;">
+                    <img src="https://images.unsplash.com/photo-1518780664697-55e3ad937233?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1765&q=80" alt="Eco-friendly" class="w-full h-48 object-cover mb-4 rounded">
                     <i class="fas fa-leaf text-4xl text-primary mb-4"></i>
                     <h3 class="text-xl font-semibold mb-2">Eco-friendly</h3>
                     <p class="text-secondary">Utilizamos materiales y procesos respetuosos con el medio ambiente.</p>
@@ -164,25 +177,68 @@
     <section id="tipologias" class="py-16 section-background">
         <div class="container mx-auto px-4">
             <h2 class="text-3xl font-bold mb-8 text-center text-secondary">Nuestras Tipologías</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <!-- Tipología House -->
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <h3 class="text-2xl font-bold mb-4 text-primary">Tipología House</h3>
-                    <ul class="space-y-2">
-                        <li class="flex items-center"><i class="fas fa-check text-primary mr-2"></i>Premium 60m²</li>
-                        <li class="flex items-center"><i class="fas fa-check text-primary mr-2"></i>Luxury 100m²</li>
-                        <li class="flex items-center"><i class="fas fa-check text-primary mr-2"></i>Large 45m²</li>
-                        <li class="flex items-center"><i class="fas fa-check text-primary mr-2"></i>Classic 30m²</li>
-                    </ul>
+            <div class="mb-8">
+                <label for="tipologia-filter" class="block text-sm font-medium text-gray-700 mb-2">Filtrar por:</label>
+                <select id="tipologia-filter" class="w-full md:w-auto px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary focus:border-primary">
+                    <option value="all">Todas las tipologías</option>
+                    <option value="house">House</option>
+                    <option value="studio">Studio</option>
+                </select>
+            </div>
+            <div id="tipologias-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Tipología House Premium -->
+                <div class="bg-white p-6 rounded-lg shadow-md tipologia-card" data-type="house">
+                    <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1769&q=80" alt="House Premium" class="w-full h-48 object-cover mb-4 rounded">
+                    <h3 class="text-2xl font-bold mb-4 text-primary">House Premium 60m²</h3>
+                    <p class="text-secondary mb-4">Espacioso y lujoso, perfecto para familias que buscan comodidad y estilo.</p>
+                    <button class="bg-primary text-white hover:bg-primary-dark font-bold py-2 px-4 rounded transition duration-300 view-more" data-tipologia="house-premium">
+                        Ver Más
+                    </button>
                 </div>
-                <!-- Tipología Studio -->
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <h3 class="text-2xl font-bold mb-4 text-primary">Tipología Studio</h3>
-                    <ul class="space-y-2">
-                        <li class="flex items-center"><i class="fas fa-check text-primary mr-2"></i>Studio 15m²</li>
-                        <li class="flex items-center"><i class="fas fa-check text-primary mr-2"></i>Studio 30m²</li>
-                    </ul>
-                    <p class="mt-4 italic text-secondary">Diseño de vanguardia, para tu hogar</p>
+                <!-- Tipología House Luxury -->
+                <div class="bg-white p-6 rounded-lg shadow-md tipologia-card" data-type="house">
+                    <img src="https://images.unsplash.com/photo-1519558260268-cde7e03a0152?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="House Luxury" class="w-full h-48 object-cover mb-4 rounded">
+                    <h3 class="text-2xl font-bold mb-4 text-primary">House Luxury 100m²</h3>
+                    <p class="text-secondary mb-4">La máxima expresión del lujo y el espacio en construcción modular.</p>
+                    <button class="bg-primary text-white hover:bg-primary-dark font-bold py-2 px-4 rounded transition duration-300 view-more" data-tipologia="house-luxury">
+                        Ver Más
+                    </button>
+                </div>
+                <!-- Tipología House Large -->
+                <div class="bg-white p-6 rounded-lg shadow-md tipologia-card" data-type="house">
+                    <img src="https://images.unsplash.com/photo-1515263487990-61b07816b324?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="House Large" class="w-full h-48 object-cover mb-4 rounded">
+                    <h3 class="text-2xl font-bold mb-4 text-primary">House Large 45m²</h3>
+                    <p class="text-secondary mb-4">Amplio y confortable, ideal para parejas o pequeñas familias.</p>
+                    <button class="bg-primary text-white hover:bg-primary-dark font-bold py-2 px-4 rounded transition duration-300 view-more" data-tipologia="house-large">
+                        Ver Más
+                    </button>
+                </div>
+                <!-- Tipología House Classic -->
+                <div class="bg-white p-6 rounded-lg shadow-md tipologia-card" data-type="house">
+                    <img src="https://images.unsplash.com/photo-1518780664697-55e3ad937233?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1765&q=80" alt="House Classic" class="w-full h-48 object-cover mb-4 rounded">
+                    <h3 class="text-2xl font-bold mb-4 text-primary">House Classic 30m²</h3>
+                    <p class="text-secondary mb-4">Compacto y funcional, perfecto para solteros o parejas.</p>
+                    <button class="bg-primary text-white hover:bg-primary-dark font-bold py-2 px-4 rounded transition duration-300 view-more" data-tipologia="house-classic">
+                        Ver Más
+                    </button>
+                </div>
+                <!-- Tipología Studio 15 -->
+                <div class="bg-white p-6 rounded-lg shadow-md tipologia-card" data-type="studio">
+                    <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1680&q=80" alt="Studio 15" class="w-full h-48 object-cover mb-4 rounded">
+                    <h3 class="text-2xl font-bold mb-4 text-primary">Studio 15m²</h3>
+                    <p class="text-secondary mb-4">Eficiente y moderno, ideal para espacios de trabajo o estudios.</p>
+                    <button class="bg-primary text-white hover:bg-primary-dark font-bold py-2 px-4 rounded transition duration-300 view-more" data-tipologia="studio-15">
+                        Ver Más
+                    </button>
+                </div>
+                <!-- Tipología Studio 30 -->
+                <div class="bg-white p-6 rounded-lg shadow-md tipologia-card" data-type="studio">
+                    <img src="https://images.unsplash.com/photo-1486304873000-235643847519?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1332&q=80" alt="Studio 30" class="w-full h-48 object-cover mb-4 rounded">
+                    <h3 class="text-2xl font-bold mb-4 text-primary">Studio 30m²</h3>
+                    <p class="text-secondary mb-4">Amplio y versátil, perfecto para oficinas o espacios creativos.</p>
+                    <button class="bg-primary text-white hover:bg-primary-dark font-bold py-2 px-4 rounded transition duration-300 view-more" data-tipologia="studio-30">
+                        Ver Más
+                    </button>
                 </div>
             </div>
         </div>
@@ -199,7 +255,6 @@
                     </div>
                 </div>
                 <button id="scroll-left" class="absolute top-1/2 left-0 transform -translate-y-1/2 bg-secondary text-white p-2 rounded-full opacity-50 hover:opacity-100 transition duration-300">
-                    
                     <i class="fas fa-chevron-left"></i>
                 </button>
                 <button id="scroll-right" class="absolute top-1/2 right-0 transform -translate-y-1/2 bg-secondary text-white p-2 rounded-full opacity-50 hover:opacity-100 transition duration-300">
@@ -265,7 +320,8 @@
                         <option value="Studio30">Studio 30m²</option>
                     </select>
                     <textarea name="message" placeholder="Mensaje" class="w-full p-2 border border-gray-300 rounded-md" rows="4" required></textarea>
-                    <button type="submit" class="w-full bg-primary hover:bg-primary-dark text-white font-bold py-2 px-4 rounded transition duration-300">
+                    <button type="submit" class="w-full bg-primary hover:bg-primary-dark text-white font-bol
+d py-2 px-4 rounded transition duration-300">
                         Enviar Mensaje
                     </button>
                 </form>
@@ -311,6 +367,7 @@
             </div>
             <div class="mt-8 pt-8 border-t border-gray-700 text-center">
                 <p>&copy; 2024 Conte House. Todos los derechos reservados.</p>
+                <p class="mt-2">Powered by <a href="https://dualitydomain.com" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">Duality Domain</a></p>
             </div>
         </div>
     </footer>
@@ -319,6 +376,20 @@
     <a href="https://wa.me/5493512363777?text=Hola%2C%20estoy%20interesado%20en%20un%20contenedor%20habitable.%20%C2%BFPodr%C3%ADan%20darme%20m%C3%A1s%20informaci%C3%B3n%3F" target="_blank" rel="noopener noreferrer" class="fixed bottom-4 right-4 bg-green-500 text-white p-3 rounded-full shadow-lg hover:bg-green-600 transition duration-300 animate-bounce">
         <i class="fab fa-whatsapp fa-2x"></i>
     </a>
+
+    <!-- Modal for Tipologías -->
+    <div id="tipologia-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+        <div class="bg-white p-4 rounded-lg max-w-3xl w-full">
+            <div id="tipologia-modal-content" class="mb-4">
+                <!-- Content will be inserted here by JavaScript -->
+            </div>
+            <div class="mt-4 flex justify-end">
+                <button id="close-tipologia-modal" class="bg-secondary hover:bg-secondary-light text-white font-bold py-2 px-4 rounded transition duration-300">
+                    Cerrar
+                </button>
+            </div>
+        </div>
+    </div>
 
     <!-- Modal for Gallery -->
     <div id="gallery-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
