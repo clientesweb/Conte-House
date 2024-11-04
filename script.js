@@ -197,7 +197,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const reelsScrollRight = document.getElementById('reels-scroll-right');
 
     const reels = [
-        { id: 1, url: 'https://www.instagram.com/reel/1' },
+        { id: 1, url: 'https://www.instagram.com/reel/CwgTtA-MaKj/?igsh=MWh3enl1em45MTVncg==' },
         { id: 2, url: 'https://www.instagram.com/reel/2' },
         { id: 3, url: 'https://www.instagram.com/reel/3' },
         { id: 4, url: 'https://www.instagram.com/reel/4' },
