@@ -198,7 +198,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const reels = [
         { id: 1, url: 'https://www.instagram.com/reel/CwgTtA-MaKj/?igsh=MWh3enl1em45MTVncg==' },
-        { id: 2, url: 'https://www.instagram.com/reel/2' },
+        { id: 2, url: 'https://www.instagram.com/reel/CwgTtA-MaKj' },
         { id: 3, url: 'https://www.instagram.com/reel/3' },
         { id: 4, url: 'https://www.instagram.com/reel/4' },
         { id: 5, url: 'https://www.instagram.com/reel/5' },
