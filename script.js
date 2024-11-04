@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', function() {
             <div class="p-4">
                 <h3 class="font-bold text-lg mb-2">${project.title}</h3>
                 <p class="text-gray-600">${project.description}</p>
-                <button class="mt-4 bg-primary text-white px-4 py-2 rounded hover:bg-primary-dark transition duration-300">Ver Más</button>
+                <button class="mt-4 bg-primary text-white px-4 py-2 rounded hover:bg-primary-dark transition duration-300 shadow-md">Ver Más</button>
             </div>
         `;
         projectsSlider.appendChild(projectCard);
@@ -153,7 +153,9 @@ document.addEventListener('DOMContentLoaded', function() {
             features: ['2 dormitorios', 'Cocina integrada', 'Sala de estar amplia', 'Baño completo'],
             images: [
                 'https://images.unsplash.com/photo-1513694203232-719a280e022f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1769&q=80',
-                'https://images.unsplash.com/photo-1519558260268-cde7e03a0152?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80',
+                'https://images.uns
+
+plash.com/photo-1519558260268-cde7e03a0152?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80',
                 'https://images.unsplash.com/photo-1515263487990-61b07816b324?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80',
                 'https://images.unsplash.com/photo-1518780664697-55e3ad937233?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1765&q=80'
             ]
