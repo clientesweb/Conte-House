@@ -1,7 +1,13 @@
 document.addEventListener('DOMContentLoaded', function() {
     // Preloader
+    const preloader = document.getElementById('preloader');
+    const content = document.body;
+
     window.addEventListener('load', function() {
-        document.getElementById('preloader').style.display = 'none';
+        setTimeout(() => {
+            preloader.style.display = 'none';
+            content.style.opacity = '1';
+        }, 500);
     });
 
     // Mobile menu toggle
@@ -147,7 +153,9 @@ document.addEventListener('DOMContentLoaded', function() {
             features: ['2 dormitorios', 'Cocina integrada', 'Sala de estar amplia', 'Baño completo'],
             images: [
                 'https://images.unsplash.com/photo-1513694203232-719a280e022f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1769&q=80',
-                'https://images.unsplash.com/photo-1519558260268-cde7e03a0152?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80'
+                'https://images.unsplash.com/photo-1519558260268-cde7e03a0152?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80',
+                'https://images.unsplash.com/photo-1515263487990-61b07816b324?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80',
+                'https://images.unsplash.com/photo-1518780664697-55e3ad937233?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1765&q=80'
             ]
         },
         'house-luxury': {
@@ -156,7 +164,9 @@ document.addEventListener('DOMContentLoaded', function() {
             features: ['3 dormitorios', 'Cocina gourmet', 'Sala de estar y comedor', 'Terraza privada'],
             images: [
                 'https://images.unsplash.com/photo-1519558260268-cde7e03a0152?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80',
-                'https://images.unsplash.com/photo-1515263487990-61b07816b324?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80'
+                'https://images.unsplash.com/photo-1515263487990-61b07816b324?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80',
+                'https://images.unsplash.com/photo-1518780664697-55e3ad937233?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1765&q=80',
+                'https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1680&q=80'
             ]
         },
         'house-large': {
@@ -165,7 +175,9 @@ document.addEventListener('DOMContentLoaded', function() {
             features: ['1 dormitorio', 'Cocina integrada', 'Sala de estar', 'Baño completo'],
             images: [
                 'https://images.unsplash.com/photo-1515263487990-61b07816b324?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80',
-                'https://images.unsplash.com/photo-1518780664697-55e3ad937233?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1765&q=80'
+                'https://images.unsplash.com/photo-1518780664697-55e3ad937233?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1765&q=80',
+                'https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1680&q=80',
+                'https://images.unsplash.com/photo-1486304873000-235643847519?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1332&q=80'
             ]
         },
         'house-classic': {
@@ -174,7 +186,9 @@ document.addEventListener('DOMContentLoaded', function() {
             features: ['1 dormitorio', 'Cocina americana', 'Área de estar', 'Baño completo'],
             images: [
                 'https://images.unsplash.com/photo-1518780664697-55e3ad937233?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1765&q=80',
-                'https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1680&q=80'
+                'https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1680&q=80',
+                'https://images.unsplash.com/photo-1486304873000-235643847519?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1332&q=80',
+                'https://images.unsplash.com/photo-1513694203232-719a280e022f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1769&q=80'
             ]
         },
         'studio-15': {
@@ -183,7 +197,9 @@ document.addEventListener('DOMContentLoaded', function() {
             features: ['Área multifuncional', 'Kitchenette', 'Baño compacto'],
             images: [
                 'https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1680&q=80',
-                'https://images.unsplash.com/photo-1486304873000-235643847519?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1332&q=80'
+                'https://images.unsplash.com/photo-1486304873000-235643847519?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1332&q=80',
+                'https://images.unsplash.com/photo-1513694203232-719a280e022f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1769&q=80',
+                'https://images.unsplash.com/photo-1519558260268-cde7e03a0152?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80'
             ]
         },
         'studio-30': {
@@ -192,7 +208,9 @@ document.addEventListener('DOMContentLoaded', function() {
             features: ['Área de trabajo', 'Sala de reuniones', 'Kitchenette', 'Baño completo'],
             images: [
                 'https://images.unsplash.com/photo-1486304873000-235643847519?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1332&q=80',
-                'https://images.unsplash.com/photo-1513694203232-719a280e022f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1769&q=80'
+                'https://images.unsplash.com/photo-1513694203232-719a280e022f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1769&q=80',
+                'https://images.unsplash.com/photo-1519558260268-cde7e03a0152?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80',
+                'https://images.unsplash.com/photo-1515263487990-61b07816b324?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80'
             ]
         }
     };
@@ -211,11 +229,17 @@ document.addEventListener('DOMContentLoaded', function() {
             </ul>
             <div class="grid grid-cols-2 gap-4">
                 ${data.images.map(image => `
-                    <img src="${image}" alt="${data.title}" class="w-full h-32 object-cover rounded-lg">
+                    <img src="${image}" alt="${data.title}" class="w-full h-32 object-cover rounded-lg cursor-pointer gallery-image">
                 `).join('')}
             </div>
         `;
         tipologiaModal.classList.remove('hidden');
+
+        // Add click event to gallery images
+        const galleryImages = tipologiaModalContent.querySelectorAll('.gallery-image');
+        galleryImages.forEach(img => {
+            img.addEventListener('click', () => openGalleryModal(data.images, data.title));
+        });
     }
 
     viewMoreButtons.forEach(button => {
@@ -234,5 +258,73 @@ document.addEventListener('DOMContentLoaded', function() {
         if (e.target === tipologiaModal) {
             tipologiaModal.classList.add('hidden');
         }
+    });
+
+    // Gallery modal
+    const galleryModal = document.getElementById('gallery-modal');
+    const galleryModalSlider = document.getElementById('gallery-modal-slider');
+    const galleryModalDescription = document.getElementById('gallery-modal-description');
+    const closeGalleryModal = document.getElementById('close-gallery-modal');
+    const galleryModalPrev = document.getElementById('gallery-modal-prev');
+    const galleryModalNext = document.getElementById('gallery-modal-next');
+
+    let currentImageIndex = 0;
+    let currentImages = [];
+
+    function openGalleryModal(images, title) {
+        currentImages = images;
+        currentImageIndex = 0;
+        updateGalleryModal();
+        galleryModalDescription.textContent = title;
+        galleryModal.classList.remove('hidden');
+    }
+
+    function updateGalleryModal() {
+        galleryModalSlider.innerHTML = `
+            <img src="${currentImages[currentImageIndex]}" alt="Gallery image" class="w-full h-64 object-cover rounded-lg">
+        `;
+    }
+
+    galleryModalPrev.addEventListener('click', () => {
+        currentImageIndex = (currentImageIndex - 1 + currentImages.length) % currentImages.length;
+        updateGalleryModal();
+    });
+
+    galleryModalNext.addEventListener('click', () => {
+        currentImageIndex = (currentImageIndex + 1) % currentImages.length;
+        updateGalleryModal();
+    });
+
+    closeGalleryModal.addEventListener('click', () => {
+        galleryModal.classList.add('hidden');
+    });
+
+    galleryModal.addEventListener('click', (e) => {
+        if (e.target === galleryModal) {
+            galleryModal.classList.add('hidden');
+        }
+    });
+
+    // FAQ functionality
+    const faqQuestions = document.querySelectorAll('.faq-question');
+    faqQuestions.forEach(question => {
+        question.addEventListener('click', () => {
+            const answer = question.nextElementSibling;
+            const icon = question.querySelector('svg');
+            
+            // Toggle the active class on the question
+            question.classList.toggle('active');
+            
+            // Toggle the visibility of the answer
+            if (answer.style.maxHeight) {
+                answer.style.maxHeight = null;
+                answer.classList.add('hidden');
+                icon.classList.remove('rotate-180');
+            } else {
+                answer.style.maxHeight = answer.scrollHeight + "px";
+                answer.classList.remove('hidden');
+                icon.classList.add('rotate-180');
+            }
+        });
     });
 });
