@@ -193,39 +193,43 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Instagram Reels
     const reelsSlider = document.getElementById('reels-slider');
-    const reelsScrollLeft = document.getElementById('reels-scroll-left');
-    const reelsScrollRight = document.getElementById('reels-scroll-right');
+const reelsScrollLeft = document.getElementById('reels-scroll-left');
+const reelsScrollRight = document.getElementById('reels-scroll-right');
 
-    const reels = [
-        { id: 1, url: 'https://www.instagram.com/reel/CwgTtA-MaKj/?igsh=MWh3enl1em45MTVncg==' },
-        { id: 2, url: 'https://www.instagram.com/reel/CwgTtA-MaKj' },
-        { id: 3, url: 'https://www.instagram.com/reel/3' },
-        { id: 4, url: 'https://www.instagram.com/reel/4' },
-        { id: 5, url: 'https://www.instagram.com/reel/5' },
-        { id: 6, url: 'https://www.instagram.com/reel/6' },
-    ];
+const reels = [
+    { id: 1, url: 'https://www.instagram.com/reel/CwgTtA-MaKj/' },
+    { id: 2, url: 'https://www.instagram.com/reel/CwgTtA-MaKj' },
+    { id: 3, url: 'https://www.instagram.com/reel/3' },
+    { id: 4, url: 'https://www.instagram.com/reel/4' },
+    { id: 5, url: 'https://www.instagram.com/reel/5' },
+    { id: 6, url: 'https://www.instagram.com/reel/6' },
+];
 
-    reels.forEach(reel => {
-        const reelElement = document.createElement('div');
-        reelElement.className = 'flex-shrink-0 w-64 h-96 bg-white rounded-lg shadow-md overflow-hidden';
-        reelElement.innerHTML = `
-            <iframe
-                src="${reel.url}"
-                class="w-full h-full"
-                frameborder="0"
-                allowfullscreen
-            ></iframe>
-        `;
-        reelsSlider.appendChild(reelElement);
-    });
+reels.forEach(reel => {
+    const reelElement = document.createElement('div');
+    reelElement.className = 'flex-shrink-0 w-64 h-96 bg-white rounded-lg shadow-md overflow-hidden';
+    reelElement.innerHTML = `
+        <blockquote class="instagram-media" data-instgrm-permalink="${reel.url}" data-instgrm-version="14"></blockquote>
+    `;
+    reelsSlider.appendChild(reelElement);
+});
 
-    reelsScrollLeft.addEventListener('click', () => {
-        reelsSlider.scrollBy({ left: -300, behavior: 'smooth' });
-    });
+// Cargar script de Instagram para procesar incrustaciones
+if (typeof instgrm === 'undefined') {
+    const script = document.createElement('script');
+    script.src = "//www.instagram.com/embed.js";
+    script.async = true;
+    document.body.appendChild(script);
+}
 
-    reelsScrollRight.addEventListener('click', () => {
-        reelsSlider.scrollBy({ left: 300, behavior: 'smooth' });
-    });
+// Configuración de desplazamiento
+reelsScrollLeft.addEventListener('click', () => {
+    reelsSlider.scrollBy({ left: -300, behavior: 'smooth' });
+});
+
+reelsScrollRight.addEventListener('click', () => {
+    reelsSlider.scrollBy({ left: 300, behavior: 'smooth' });
+});
 
     // Proyectos Realizados
     const proyectosSlider = document.getElementById('proyectos-slider');
