@@ -62,7 +62,7 @@
     <!-- Header -->
     <header class="bg-white shadow-md py-4 sticky top-0 z-40">
         <div class="container mx-auto px-4 flex justify-between items-center">
-            <img src="logo.png" alt="Conte House Logo" class="h-12 w-auto">
+            <img src="logo.png" alt="Conte House Logo" class="h-16 w-auto"> <!-- Increased logo size -->
             <nav id="main-nav" class="hidden lg:block">
                 <ul class="flex space-x-6">
                     <li><a href="#inicio" class="text-secondary hover:text-primary transition duration-300">Inicio</a></li>
@@ -107,31 +107,11 @@
                 <p class="text-xl sm:text-2xl mb-4 px-4 animate-fade-in-up">Arquitectura Sostenible</p>
                 <p class="text-lg mb-8 px-4 animate-fade-in-up">Construcción de modulares habitables en contenedores marítimos</p>
                 <div class="space-x-4">
-                    <button class="bg-primary text-white hover:bg-primary-dark font-bold py-2 px-4 rounded transition duration-300 animate-fade-in-up" style="animation-delay: 0.2s;">
+                    <a href="#contacto" class="bg-primary text-white hover:bg-primary-dark font-bold py-2 px-4 rounded transition duration-300 animate-fade-in-up" style="animation-delay: 0.2s;">
                         Solicitar Cotización
-                    </button>
-                    <button class="bg-transparent hover:bg-white hover:text-secondary text-white font-semibold py-2 px-4 border border-white rounded transition duration-300 animate-fade-in-up" style="animation-delay: 0.4s;">
-                        Ver Tipologías
-                    </button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Banner Publicitario -->
-    <section id="banner-publicitario" class="py-16 bg-primary text-white">
-        <div class="container mx-auto px-4">
-            <div class="flex flex-col md:flex-row items-center justify-between">
-                <div class="md:w-2/3 mb-6 md:mb-0">
-                    <h2 class="text-3xl font-bold mb-4">¡Oferta Especial!</h2>
-                    <p class="text-xl mb-4">Obtén un 10% de descuento en tu próximo proyecto de casa contenedor.</p>
-                </div>
-                <div class="md:w-1/3 flex flex-col sm:flex-row gap-4">
-                    <a href="#contacto" class="bg-white text-primary hover:bg-gray-200 font-bold py-2 px-6 rounded transition duration-300 text-center">
-                        Contáctanos
                     </a>
-                    <a href="#tipologias" class="bg-secondary text-white hover:bg-secondary-light font-bold py-2 px-6 rounded transition duration-300 text-center">
-                        Ver Modelos
+                    <a href="#tipologias" class="bg-transparent hover:bg-white hover:text-secondary text-white font-semibold py-2 px-4 border border-white rounded transition duration-300 animate-fade-in-up" style="animation-delay: 0.4s;">
+                        Ver Tipologías
                     </a>
                 </div>
             </div>
@@ -178,7 +158,7 @@
                     <p class="text-secondary">Transformamos contenedores marítimos en espacios habitables y funcionales.</p>
                 </div>
                 <div class="bg-white p-6 rounded-lg shadow-md text-center hover-grow animate-fade-in-up" style="animation-delay: 0.3s;">
-                    <img  src="https://images.unsplash.com/photo-1513694203232-719a280e022f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1769&q=80" alt="Construcción Modular" class="w-full h-48 object-cover mb-4 rounded">
+                    <img    src="https://images.unsplash.com/photo-1513694203232-719a280e022f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1769&q=80" alt="Construcción Modular" class="w-full h-48 object-cover mb-4 rounded">
                     <i class="fas fa-home text-4xl text-primary mb-4"></i>
                     <h3 class="text-xl font-semibold mb-2">Construcción Modular</h3>
                     <p class="text-secondary">Ofrecemos soluciones rápidas y eficientes para viviendas y espacios comerciales.</p>
@@ -304,6 +284,26 @@
         </div>
     </section>
 
+    <!-- Banner Publicitario -->
+    <section id="banner-publicitario" class="py-16 bg-primary text-white">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center justify-between">
+                <div class="md:w-2/3 mb-6 md:mb-0">
+                    <h2 class="text-3xl font-bold mb-4">¡Oferta Especial!</h2>
+                    <p class="text-xl mb-4">Obtén un 10% de descuento en tu próximo proyecto de casa contenedor.</p>
+                </div>
+                <div class="md:w-1/3 flex flex-col sm:flex-row gap-4">
+                    <a href="#contacto" class="bg-white text-primary hover:bg-gray-200 font-bold py-2 px-6 rounded transition duration-300 text-center">
+                        Contáctanos
+                    </a>
+                    <a href="#tipologias" class="bg-secondary text-white hover:bg-secondary-light font-bold py-2 px-6 rounded transition duration-300 text-center">
+                        Ver Modelos
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Testimonios Section -->
     <section id="testimonios" class="py-16 section-background">
         <div class="container mx-auto px-4">
@@ -328,8 +328,8 @@
     <section id="mapa" class="py-16 section-background">
         <div class="container mx-auto px-4">
             <h2 class="text-3xl font-bold mb-8 text-center text-secondary">Nuestra Ubicación</h2>
-            <div class="w-full h-96 rounded-lg shadow-md overflow-hidden">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3405.0925789042!2d-64.18969492428825!3d-31.41199999999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9432a28892a73dd1%3A0x4104a66357705427!2sAv.%20Col%C3%B3n%204933%2C%20X5003%20C%C3%B3rdoba!5e0!3m2!1sen!2sar!4v1686251744602!5m2!1sen!2sar" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div class="w-full h-96 rounded-lg overflow-hidden shadow-lg">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3405.0164164666!2d-64.18813492428866!3d-31.41199999999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9432a28892a73dd1%3A0x4104a66357705427!2sAv.%20Col%C3%B3n%204933%2C%20X5003%20C%C3%B3rdoba!5e0!3m2!1sen!2sar!4v1686251690392!5m2!1sen!2sar" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
     </section>
@@ -338,34 +338,49 @@
     <section id="contacto" class="py-16 section-background">
         <div class="container mx-auto px-4">
             <h2 class="text-3xl font-bold mb-8 text-center text-secondary">Contáctanos</h2>
-            <div class="flex flex-col md:flex-row gap-8">
-                <div class="md:w-1/2">
+            <div class="flex flex-wrap -mx-4">
+                <div class="w-full md:w-1/2 px-4 mb-8 md:mb-0">
                     <form id="contact-form" class="bg-white p-6 rounded-lg shadow-md">
                         <div class="mb-4">
                             <label for="name" class="block text-secondary font-bold mb-2">Nombre</label>
-                            <input type="text" id="name" name="name" required class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-primary focus:border-primary">
+                            <input type="text" id="name" name="name" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary" required>
                         </div>
                         <div class="mb-4">
                             <label for="email" class="block text-secondary font-bold mb-2">Email</label>
-                            <input type="email" id="email" name="email" required class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-primary focus:border-primary">
+                            <input type="email" id="email" name="email" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary" required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="phone" class="block text-secondary font-bold mb-2">Teléfono</label>
+                            <input type="tel" id="phone" name="phone" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary" required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="tipologias" class="block text-secondary font-bold mb-2">Tipologías de interés</label>
+                            <select id="tipologias" name="tipologias" multiple class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary" required>
+                                <option value="house-premium">House Premium 60m²</option>
+                                <option value="house-luxury">House Luxury 100m²</option>
+                                <option value="house-large">House Large 45m²</option>
+                                <option value="house-classic">House Classic 30m²</option>
+                                <option value="studio-15">Studio 15m²</option>
+                                <option value="studio-30">Studio 30m²</option>
+                            </select>
                         </div>
                         <div class="mb-4">
                             <label for="message" class="block text-secondary font-bold mb-2">Mensaje</label>
-                            <textarea id="message" name="message" required rows="4" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-primary focus:border-primary"></textarea>
+                            <textarea id="message" name="message" rows="4" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary" required></textarea>
                         </div>
-                        <button type="submit" class="bg-primary text-white hover:bg-primary-dark font-bold py-2 px-4 rounded transition duration-300">
-                            Enviar Mensaje
-                        </button>
+                        <button type="submit" class="w-full bg-primary text-white font-bold py-2 px-4 rounded hover:bg-primary-dark transition duration-300">Enviar Mensaje</button>
                     </form>
                 </div>
-                <div class="md:w-1/2">
-                    <div class="bg-white p-6 rounded-lg shadow-md">
-                        <h3 class="text-2xl font-bold mb-4 text-secondary">Información de Contacto</h3>
-                        <p class="mb-2"><i class="fas fa-map-marker-alt text-primary mr-2"></i> Av. Colón 4933, Córdoba, Argentina</p>
-                        <p class="mb-2"><i class="fas fa-phone text-primary mr-2"></i> +54 9 351 236-3777</p>
-                        <p class="mb-2"><i class="fas fa-envelope text-primary mr-2"></i> info@contehouse.com</p>
-                        <div class="mt-6">
-                            <h4 class="text-xl font-bold mb-2 text-secondary">Síguenos en redes sociales</h4>
+                <div class="w-full md:w-1/2 px-4">
+                    <div class="bg-white p-6 rounded-lg shadow-md h-full flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-2xl font-bold mb-4 text-secondary">Información de Contacto</h3>
+                            <p class="mb-4"><i class="fas fa-map-marker-alt text-primary mr-2"></i> Av. Colón 4933, Córdoba, Argentina</p>
+                            <p class="mb-4"><i class="fas fa-phone text-primary mr-2"></i> +54 9 351 236-3777</p>
+                            <p class="mb-4"><i class="fas fa-envelope text-primary mr-2"></i> info@contehouse.com</p>
+                        </div>
+                        <div class="mt-8">
+                            <h4 class="text-xl font-bold mb-4 text-secondary">Síguenos en redes sociales</h4>
                             <div class="flex space-x-4">
                                 <a href="#" class="text-primary hover:text-primary-dark transition duration-300"><i class="fab fa-facebook-f fa-2x"></i></a>
                                 <a href="#" class="text-primary hover:text-primary-dark transition duration-300"><i class="fab fa-instagram fa-2x"></i></a>
@@ -383,7 +398,7 @@
         <div class="container mx-auto px-4">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                 <div class="flex flex-col items-center md:items-start animate-fade-in-up">
-                    <img src="logo.png" alt="Conte House Logo" class="h-24 w-auto mb-4">
+                    <img src="logo.png" alt="Conte House Logo" class="w-32 h-auto mb-4"> <!-- Increased logo size -->
                     <p class="text-center md:text-left">Arquitectura sostenible en contenedores marítimos</p>
                 </div>
                 <div class="animate-fade-in-up" style="animation-delay: 0.2s;">
@@ -420,17 +435,17 @@
     </footer>
 
     <!-- WhatsApp Button -->
-    <a href="https://wa.me/5493512363777?text=Hola%2C%20estoy%20interesado%20en%20un%20contenedor%20habitable.%20%C2%BFPodr%C3%ADan%20darme%20m%C3%A1s%20informaci%C3%B3n%3F" target="_blank" rel="noopener noreferrer" class="fixed bottom-4 right-4 bg-green-500 text-white p-3 rounded-full shadow-lg hover:bg-green-600 transition duration-300 animate-bounce">
+    <a href="https://wa.me/5493512363777?text=Hola%2C%20estoy%20interesado%20en%20un%20contenedor%20habitable.%20%C2%BFPodr%C3%ADan%20darme%20m%C3%A1s%20informaci%C3%B3n%3F" target="_blank" rel="noopener noreferrer" class="fixed bottom-4 right-4 bg-green-500 text-white p-3 rounded-full shadow-lg hover:bg-green-600 transition duration-300 animate-bounce z-50">
         <i class="fab fa-whatsapp fa-2x"></i>
     </a>
 
-    <!-- Modal for Tipologías -->
-    <div id="tipologia-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
+    <!-- Modals -->
+    <div id="tipologia-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-50">
         <div class="bg-white p-8 rounded-lg max-w-3xl w-full max-h-[90vh] overflow-y-auto">
             <div class="flex justify-between items-center mb-4">
                 <h2 id="modal-title" class="text-2xl font-bold text-secondary"></h2>
                 <button id="close-modal" class="text-gray-500 hover:text-gray-700">
-                    <i class="fas fa-times text-2xl"></i>
+                    <i class="fas fa-times fa-2x"></i>
                 </button>
             </div>
             <div id="modal-content"></div>
