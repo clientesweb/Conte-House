@@ -118,6 +118,26 @@
         </div>
     </section>
 
+    <!-- Banner Publicitario -->
+    <section id="banner-publicitario" class="py-16 bg-primary text-white">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center justify-between">
+                <div class="md:w-2/3 mb-6 md:mb-0">
+                    <h2 class="text-3xl font-bold mb-4">¡Oferta Especial!</h2>
+                    <p class="text-xl mb-4">Obtén un 10% de descuento en tu próximo proyecto de casa contenedor.</p>
+                </div>
+                <div class="md:w-1/3 flex flex-col sm:flex-row gap-4">
+                    <a href="#contacto" class="bg-white text-primary hover:bg-gray-200 font-bold py-2 px-6 rounded transition duration-300 text-center">
+                        Contáctanos
+                    </a>
+                    <a href="#tipologias" class="bg-secondary text-white hover:bg-secondary-light font-bold py-2 px-6 rounded transition duration-300 text-center">
+                        Ver Modelos
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Nosotros Section -->
     <section id="nosotros" class="py-16 section-background">
         <div class="container mx-auto px-4">
@@ -152,7 +172,7 @@
                     <p class="text-secondary">Creamos diseños personalizados que se adaptan a tus necesidades y al medio ambiente.</p>
                 </div>
                 <div class="bg-white p-6 rounded-lg shadow-md text-center hover-grow animate-fade-in-up" style="animation-delay: 0.2s;">
-                    <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1313&q=80" alt="Reutilización" class="w-full h-48 object-cover mb-4 rounded">
+                    <img  src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1313&q=80" alt="Reutilización" class="w-full h-48 object-cover mb-4 rounded">
                     <i class="fas fa-recycle text-4xl text-primary mb-4"></i>
                     <h3 class="text-xl font-semibold mb-2">Reutilización</h3>
                     <p class="text-secondary">Transformamos contenedores marítimos en espacios habitables y funcionales.</p>
@@ -244,6 +264,26 @@
         </div>
     </section>
 
+    <!-- Instagram Reels Section -->
+    <section id="instagram-reels" class="py-16 section-background">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-8 text-center text-secondary">Nuestros Reels</h2>
+            <div class="relative">
+                <div class="overflow-x-auto pb-6 scrollbar-hide">
+                    <div id="reels-slider" class="flex space-x-4 w-max">
+                        <!-- Reels will be inserted here by JavaScript -->
+                    </div>
+                </div>
+                <button id="reels-scroll-left" class="absolute top-1/2 left-0 transform -translate-y-1/2 bg-secondary text-white p-2 rounded-full opacity-50 hover:opacity-100 transition duration-300">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button id="reels-scroll-right" class="absolute top-1/2 right-0 transform -translate-y-1/2 bg-secondary text-white p-2 rounded-full opacity-50 hover:opacity-100 transition duration-300">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
     <!-- Proyectos Section -->
     <section id="proyectos" class="py-16 section-background">
         <div class="container mx-auto px-4">
@@ -289,43 +329,7 @@
         <div class="container mx-auto px-4">
             <h2 class="text-3xl font-bold mb-8 text-center text-secondary">Nuestra Ubicación</h2>
             <div class="w-full h-96 rounded-lg shadow-md overflow-hidden">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d217954.2533524786!2d-64.33737991640624!3d-31.399083999999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9432985f478f5b69%3A0xb0a24f9a5366b092!2sC%C3%B3rdoba%2C%20Cordoba%20Province%2C%20Argentina!5e0!3m2!1sen!2sus!4v1653664634652!5m2!1sen!2sus" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ Section -->
-    <section id="faq" class="py-16 section-background">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold mb-8 text-center text-secondary">Preguntas Frecuentes</h2>
-            <div class="space-y-4">
-                <div class="faq-item">
-                    <button class="faq-question w-full text-left py-2 px-4 bg-white rounded-lg shadow-md flex justify-between items-center">
-                        <span>¿Cuánto tiempo toma construir una casa contenedor?</span>
-                        <svg class="w-6 h-6 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                    </button>
-                    <div class="faq-answer hidden mt-2 p-4 bg-gray-100 rounded-lg">
-                        El tiempo de construcción varía según el tamaño y la complejidad del proyecto, pero generalmente toma entre 2 y 4 meses desde el diseño hasta la entrega final.
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question w-full text-left py-2 px-4 bg-white rounded-lg shadow-md flex justify-between items-center">
-                        <span>¿Las casas contenedor son energéticamente eficientes?</span>
-                        <svg class="w-6 h-6 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                    </button>
-                    <div class="faq-answer hidden mt-2 p-4 bg-gray-100 rounded-lg">
-                        Sí, nuestras casas contenedor están diseñadas con aislamiento de alta calidad y pueden equiparse con sistemas de energía solar, lo que las hace muy eficientes energéticamente.
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question w-full text-left py-2 px-4 bg-white rounded-lg shadow-md flex justify-between items-center">
-                        <span>¿Puedo personalizar el diseño de mi casa contenedor?</span>
-                        <svg class="w-6 h-6 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                    </button>
-                    <div class="faq-answer hidden mt-2 p-4 bg-gray-100 rounded-lg">
-                        Absolutamente. Trabajamos estrechamente con nuestros clientes para personalizar cada aspecto del diseño, desde la distribución interior hasta los acabados y características especiales.
-                    </div>
-                </div>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3405.0925789042!2d-64.18969492428825!3d-31.41199999999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9432a28892a73dd1%3A0x4104a66357705427!2sAv.%20Col%C3%B3n%204933%2C%20X5003%20C%C3%B3rdoba!5e0!3m2!1sen!2sar!4v1686251744602!5m2!1sen!2sar" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
     </section>
@@ -334,42 +338,42 @@
     <section id="contacto" class="py-16 section-background">
         <div class="container mx-auto px-4">
             <h2 class="text-3xl font-bold mb-8 text-center text-secondary">Contáctanos</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-                <div class="animate-fade-in-left">
-                    <h3 class="text-xl font-semibold mb-4">Información de Contacto</h3>
-                    <ul class="space-y-4">
-                        <li class="flex items-center">
-                            <i class="fas fa-map-marker-alt text-primary mr-2"></i>
-                            <span>Ubicación: Consultar por zona</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-phone text-primary mr-2"></i>
-                            <span>03512363777</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-envelope text-primary mr-2"></i>
-                            <span>contehouse1@gmail.com</span>
-                        </li>
-                    </ul>
+            <div class="flex flex-col md:flex-row gap-8">
+                <div class="md:w-1/2">
+                    <form id="contact-form" class="bg-white p-6 rounded-lg shadow-md">
+                        <div class="mb-4">
+                            <label for="name" class="block text-secondary font-bold mb-2">Nombre</label>
+                            <input type="text" id="name" name="name" required class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-primary focus:border-primary">
+                        </div>
+                        <div class="mb-4">
+                            <label for="email" class="block text-secondary font-bold mb-2">Email</label>
+                            <input type="email" id="email" name="email" required class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-primary focus:border-primary">
+                        </div>
+                        <div class="mb-4">
+                            <label for="message" class="block text-secondary font-bold mb-2">Mensaje</label>
+                            <textarea id="message" name="message" required rows="4" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-primary focus:border-primary"></textarea>
+                        </div>
+                        <button type="submit" class="bg-primary text-white hover:bg-primary-dark font-bold py-2 px-4 rounded transition duration-300">
+                            Enviar Mensaje
+                        </button>
+                    </form>
                 </div>
-                <form id="contact-form" class="space-y-4 animate-fade-in-right" action="https://formspree.io/f/your-form-id" method="POST">
-                    <input type="text" name="name" placeholder="Nombre" class="w-full p-2 border border-gray-300 rounded-md" required>
-                    <input type="tel" name="phone" placeholder="Teléfono" class="w-full p-2 border border-gray-300 rounded-md" required>
-                    <input type="email" name="email" placeholder="Correo Electrónico" class="w-full p-2 border border-gray-300 rounded-md" required>
-                    <select name="tipologia" class="w-full p-2 border border-gray-300 rounded-md" required>
-                        <option value="">Selecciona la tipología</option>
-                        <option value="Premium">House Premium 60m²</option>
-                        <option value="Luxury">House Luxury 100m²</option>
-                        <option value="Large">House Large 45m²</option>
-                        <option value="Classic">House Classic 30m²</option>
-                        <option value="Studio15">Studio 15m²</option>
-                        <option value="Studio30">Studio 30m²</option>
-                    </select>
-                    <textarea name="message" placeholder="Mensaje" class="w-full p-2 border border-gray-300 rounded-md" rows="4" required></textarea>
-                    <button type="submit" class="w-full bg-primary hover:bg-primary-dark text-white font-bold py-2 px-4 rounded transition duration-300">
-                        Enviar Mensaje
-                    </button>
-                </form>
+                <div class="md:w-1/2">
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="text-2xl font-bold mb-4 text-secondary">Información de Contacto</h3>
+                        <p class="mb-2"><i class="fas fa-map-marker-alt text-primary mr-2"></i> Av. Colón 4933, Córdoba, Argentina</p>
+                        <p class="mb-2"><i class="fas fa-phone text-primary mr-2"></i> +54 9 351 236-3777</p>
+                        <p class="mb-2"><i class="fas fa-envelope text-primary mr-2"></i> info@contehouse.com</p>
+                        <div class="mt-6">
+                            <h4 class="text-xl font-bold mb-2 text-secondary">Síguenos en redes sociales</h4>
+                            <div class="flex space-x-4">
+                                <a href="#" class="text-primary hover:text-primary-dark transition duration-300"><i class="fab fa-facebook-f fa-2x"></i></a>
+                                <a href="#" class="text-primary hover:text-primary-dark transition duration-300"><i class="fab fa-instagram fa-2x"></i></a>
+                                <a href="#" class="text-primary hover:text-primary-dark transition duration-300"><i class="fab fa-youtube fa-2x"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -378,36 +382,34 @@
     <footer class="bg-secondary text-white py-12">
         <div class="container mx-auto px-4">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="flex flex-col items-center md:items-start animate-fade-in-up" style="animation-delay: 0.1s;">
-                    <img src="logo.png" alt="Conte House Logo" class="w-24 h-24 mb-4">
+                <div class="flex flex-col items-center md:items-start animate-fade-in-up">
+                    <img src="logo.png" alt="Conte House Logo" class="h-24 w-auto mb-4">
                     <p class="text-center md:text-left">Arquitectura sostenible en contenedores marítimos</p>
                 </div>
                 <div class="animate-fade-in-up" style="animation-delay: 0.2s;">
-                    <h3 class="text-xl font-semibold mb-4">Enlaces Rápidos</h3>
+                    <h3 class="text-xl font-bold mb-4">Enlaces Rápidos</h3>
                     <ul class="space-y-2">
-                        <li><a href="#inicio" class="hover:text-gray-300 transition duration-300">Inicio</a></li>
-                        <li><a href="#nosotros" class="hover:text-gray-300 transition duration-300">Nosotros</a></li>
-                        <li><a href="#servicios" class="hover:text-gray-300 transition duration-300">Servicios</a></li>
-                        <li><a href="#tipologias" class="hover:text-gray-300 transition duration-300">Tipologías</a></li>
-                        <li><a href="#proyectos" class="hover:text-gray-300 transition duration-300">Proyectos</a></li>
-                        <li><a href="#contacto" class="hover:text-gray-300 transition duration-300">Contacto</a></li>
-                    </ul>
-                </div>
-                <div class="animate-fade-in-up" style="animation-delay: 0.3s;">
-                    <h3 class="text-xl font-semibold mb-4">Horario de Atención</h3>
-                    <ul class="space-y-2">
-                        <li>Lunes - Viernes: 9:00 AM - 6:00 PM</li>
-                        <li>Sábado: 10:00 AM - 2:00 PM</li>
-                        <li>Domingo: Cerrado</li>
+                        <li><a href="#inicio" class="hover:text-primary transition duration-300">Inicio</a></li>
+                        <li><a href="#nosotros" class="hover:text-primary transition duration-300">Nosotros</a></li>
+                        <li><a href="#servicios" class="hover:text-primary transition duration-300">Servicios</a></li>
+                        <li><a href="#tipologias" class="hover:text-primary transition duration-300">Tipologías</a></li>
+                        <li><a href="#proyectos" class="hover:text-primary transition duration-300">Proyectos</a></li>
+                        <li><a href="#contacto" class="hover:text-primary transition duration-300">Contacto</a></li>
                     </ul>
                 </div>
                 <div class="animate-fade-in-up" style="animation-delay: 0.4s;">
-                    <h3 class="text-xl font-semibold mb-4">Boletín Informativo</h3>
-                    <p class="mb-4">Suscríbete para recibir nuestras últimas noticias y ofertas.</p>
-                    <form class="flex">
-                        <input type="email" placeholder="Tu correo electrónico" class="p-2 w-full rounded-l-md focus:outline-none focus:ring-2 focus:ring-primary text-gray-800">
-                        <button type="submit" class="bg-primary text-white px-4 rounded-r-md hover:bg-primary-dark transition duration-300">Suscribir</button>
-                    </form>
+                    <h3 class="text-xl font-bold mb-4">Contacto</h3>
+                    <p class="mb-2"><i class="fas fa-map-marker-alt mr-2"></i> Av. Colón 4933, Córdoba, Argentina</p>
+                    <p class="mb-2"><i class="fas fa-phone mr-2"></i> +54 9 351 236-3777</p>
+                    <p><i class="fas fa-envelope mr-2"></i> info@contehouse.com</p>
+                </div>
+                <div class="animate-fade-in-up" style="animation-delay: 0.6s;">
+                    <h3 class="text-xl font-bold mb-4">Síguenos</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-white hover:text-primary transition duration-300"><i class="fab fa-facebook-f fa-2x"></i></a>
+                        <a href="#" class="text-white hover:text-primary transition duration-300"><i class="fab fa-instagram fa-2x"></i></a>
+                        <a href="#" class="text-white hover:text-primary transition duration-300"><i class="fab fa-youtube fa-2x"></i></a>
+                    </div>
                 </div>
             </div>
             <div class="mt-8 pt-8 border-t border-gray-700 text-center">
@@ -423,64 +425,15 @@
     </a>
 
     <!-- Modal for Tipologías -->
-    <div id="tipologia-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
-        <div class="bg-white p-4 rounded-lg max-w-3xl w-full">
-            <div id="tipologia-modal-content" class="mb-4">
-                <!-- Content will be inserted here by JavaScript -->
-            </div>
-            <div class="mt-4 flex justify-end">
-                <button id="close-tipologia-modal" class="bg-secondary hover:bg-secondary-light text-white font-bold py-2 px-4 rounded transition duration-300">
-                    Cerrar
+    <div id="tipologia-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
+        <div class="bg-white p-8 rounded-lg max-w-3xl w-full max-h-[90vh] overflow-y-auto">
+            <div class="flex justify-between items-center mb-4">
+                <h2 id="modal-title" class="text-2xl font-bold text-secondary"></h2>
+                <button id="close-modal" class="text-gray-500 hover:text-gray-700">
+                    <i class="fas fa-times text-2xl"></i>
                 </button>
             </div>
-        </div>
-    </div>
-
-    <!-- Modal for Gallery -->
-    <div id="gallery-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
-        <div class="bg-white p-4 rounded-lg max-w-3xl w-full">
-            <div id="gallery-modal-slider" class="mb-4 relative">
-                <!-- Modal slider images will be inserted here by JavaScript -->
-                <button id="gallery-modal-prev" class="absolute top-1/2 left-0 transform -translate-y-1/2 bg-secondary text-white p-2 rounded-full opacity-50 hover:opacity-100 transition duration-300">
-                    <i class="fas fa-chevron-left"></i>
-                </button>
-                <button id="gallery-modal-next" class="absolute top-1/2 right-0 transform -translate-y-1/2 bg-secondary text-white p-2 rounded-full opacity-50 hover:opacity-100 transition duration-300">
-                    <i class="fas fa-chevron-right"></i>
-                </button>
-            </div>
-            <div id="gallery-modal-description" class="mt-4">
-                <!-- Description will be inserted here by JavaScript -->
-            </div>
-            <div class="mt-4 flex justify-between items-center">
-                <h3 class="text-xl font-semibold">Detalles del Contenedor</h3>
-                <button id="close-gallery-modal" class="bg-secondary hover:bg-secondary-light text-white font-bold py-2 px-4 rounded transition duration-300">
-                    Cerrar
-                </button>
-            </div>
-        </div>
-    </div>
-
-    <!-- Modal for Projects -->
-    <div id="project-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
-        <div class="bg-white p-4 rounded-lg max-w-3xl w-full">
-            <div id="project-modal-slider" class="mb-4 relative">
-                <!-- Modal slider images will be inserted here by JavaScript -->
-                <button id="project-modal-prev" class="absolute top-1/2 left-0 transform -translate-y-1/2 bg-secondary text-white p-2 rounded-full opacity-50 hover:opacity-100 transition duration-300">
-                    <i class="fas fa-chevron-left"></i>
-                </button>
-                <button id="project-modal-next" class="absolute top-1/2 right-0 transform -translate-y-1/2 bg-secondary text-white p-2 rounded-full opacity-50 hover:opacity-100 transition duration-300">
-                    <i class="fas fa-chevron-right"></i>
-                </button>
-            </div>
-            <div id="project-modal-description" class="mt-4">
-                <!-- Description will be inserted here by JavaScript -->
-            </div>
-            <div class="mt-4 flex justify-between items-center">
-                <h3 class="text-xl font-semibold">Detalles del Proyecto</h3>
-                <button id="close-project-modal" class="bg-secondary hover:bg-secondary-light text-white font-bold py-2 px-4 rounded transition duration-300">
-                    Cerrar
-                </button>
-            </div>
+            <div id="modal-content"></div>
         </div>
     </div>
 
